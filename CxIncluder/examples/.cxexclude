@@ -1,0 +1,11 @@
+# Removing any tests in the sub dirs
+*.test.js
+e2e-tests
+__mocks__
+__tests__
+
+# Examples
+examples
+
+# Scripts (only remove one scripts folder)
+packages/gatsby/scripts
