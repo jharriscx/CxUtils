@@ -67,7 +67,7 @@ function FlowScan
     $gitName = $line.Substring($line.LastIndexOf("/") + 1)
     $Project = [IO.Path]::GetFileNameWithoutExtension($gitName)
     # Added 'cd' command to satisfy $clonefolder relative path
-	  cd C:\Users\CxAdmin\CxFlow
+    cd C:\Users\CxAdmin\CxFlow
     java -jar $Flow --spring.config.location="./application-scan.yml" --scan --f=$clonefolder --cx-project=$Project --app=$Project --forcescan  --exclude-folders=$flowexclusions
     Remove-Item $clonefolder -recurse -force
     Remove-Item * -Filter *.zip -force
